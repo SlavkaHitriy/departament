@@ -1,13 +1,12 @@
 import React from 'react'
 
 // Components
-import Home from './pages/Home/Home'
-import Teachers from './pages/Teachers/Teachers'
+import MainRoutes from './routes/MainRoutes'
 
 const App = () => {
     return (
         <div className='app'>
-            <Home />
+            <MainRoutes />
         </div>
     )
 }
