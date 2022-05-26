@@ -3,8 +3,6 @@ import React from 'react'
 // Styles
 import style from './index.module.scss'
 
-
-
 const BurgerMenu = ({items}) => {
    return (
       <div className={style.menu}>
