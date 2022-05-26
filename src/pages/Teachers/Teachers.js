@@ -12,7 +12,7 @@ const Teachers = () => {
     return (
         <div className={styles.teachers}>
             <div className={styles.home}>
-                asdfasdf
+               asdfasdf
             </div>
         </div>
     )
