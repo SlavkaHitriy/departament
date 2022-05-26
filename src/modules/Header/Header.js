@@ -48,7 +48,7 @@ const Header = () => {
                         <span>ot.vntu@gmail.com</span>
                     </a>
                     <div className={styles.headerMenu}>
-                        <div className={styles.textMenu}>Mеню</div>
+                        <div className={styles.textMenu}>Mеню Slavka</div>
                         <div className={styles.menuBtn}>
                             <div className={styles.burgerBtn}>
                                 <span/>
