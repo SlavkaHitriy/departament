@@ -1,5 +1,6 @@
 @import 'vars';
 @import 'mixins';
+@import 'fonts';
 
 *, *::before, *::after {
     box-sizing: border-box;
@@ -7,6 +8,29 @@
 
 body {
     color: $black;
+    background-color: $grayWhite;
     font-size: 16px;
-    @include btn();
+    font-family: 'Raleway', sans-serif;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+input {
+    border: none;
+    outline: none;
+    display: block;
+    font-family: inherit;
+}
+
+button {
+    display: block;
+    border: none;
+    background: none;
+    outline: none;
+    font-family: inherit;
+    cursor: pointer;
+    padding: 0;
 }
