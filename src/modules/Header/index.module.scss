@@ -43,7 +43,7 @@ header {
     margin-right: 10px;
     position: relative;
     max-width: 710px;
-    width: 100%;
+    flex-grow: 1;
 }
 
 .headerSearchBtn {
