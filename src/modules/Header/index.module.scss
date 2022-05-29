@@ -1,6 +1,10 @@
 @import '/src/assets/styles/vars';
 @import '/src/assets/styles/mixins';
 
+
+
+
+
 header {
     margin-top: 21px;
 }
@@ -56,12 +60,10 @@ header {
     justify-content: center;
     background-color: $white;
     border-radius: 10px;
-
     svg {
         width: 30px;
         height: 30px;
     }
-
     path {
         fill: $primary;
     }
@@ -233,7 +235,7 @@ header {
     }
 }
 
-@media (max-width: 966px) {
+@media (max-width: 1024px) {
     .headerFirst {
         display: flex;
         align-items: center;
