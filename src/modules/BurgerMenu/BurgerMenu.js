@@ -3,9 +3,10 @@ import React from 'react'
 // Styles
 import styles from './index.module.scss'
 
-const BurgerMenu = () => {
+
+const BurgerMenu = ({active, setActive}) => {
     return (
-        <div className={styles.menu}>
+        <div className={active ? styles.menu + ' ' + styles.active : styles.menu}>
             <div className={styles.menuContent}>
                 <ul className={styles.menuList}>
                     <li className={styles.menuListItems}>
@@ -166,7 +167,7 @@ const BurgerMenu = () => {
                     </li>
                 </ul>
             </div>
-            <div className={styles.clBtn}>
+            <div className={styles.clBtn} onClick={() => setActive(!active)}>
                 <span/>
             </div>
         </div>
