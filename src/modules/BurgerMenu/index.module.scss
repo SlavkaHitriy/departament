@@ -1,7 +1,141 @@
 @import '/src/assets/styles/vars';
 @import '/src/assets/styles/mixins';
 
-*{
+
+
+.menu{
+   width: 329px;
+   background-color: $white;
+   padding: 19px;
+   display: flex;
+   position: absolute;
+   top: 0;
+   right: 0;
+   z-index: 3;
+   display: none;
+}
+.menu.active {
+   display: block;
+}
+
+.menuContent{
+   background-color: $white;
+}
+
+.menuList{
+}
+
+.menuListItems{
+   padding-left: 10px;
+
+   & + & {
+      margin-top: 30px;
+   } 
+   &:hover{
+      background-color: #ddd;
+   }
+}
+
+.menuListItem{
+   display: flex;
+   align-items: center;
+
+   svg{
+      width: 40px;
+      height: 45px;
+      display: block;
+      align-items: flex-start;
+   }
+
+   path {
+      fill: $primary;
+   }
+
+   p{
+      margin-left: 25px;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 23px;
+      color: $black;
+   }
+}
+
+.menuListItems1 {
+   padding-left: 10px;
+   margin: 30px 0 30px 0;
+}
+
+.menuListItem1 {
+   display: flex;
+
+   svg {
+      width: 40px;
+      height: 40px;
+      display: block;
+      align-items: flex-start;
+   }
+   
+   path {
+      fill: $primary;
+   }
+}
+
+.subMenu{
+   padding-left: 25px ;
+}
+
+.subItem{
+   margin:0 ;
+   font-weight: 500;
+   font-size: 20px;
+   line-height: 23px;
+   color: $black;
+
+   & + & {
+      margin-top: 10px;
+   }
+
+   & a{
+   margin: 0;
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 23px;
+   color: $black;
+   }
+
+   & a:hover {
+      display: inline-block;
+      width: 100%;
+      background-color: #ddd;
+   }
+}
+
+.clBtn {
+   display: flex;
+   align-items: center;
+   position: absolute;
+   right: 15px;
+   top: 15px;
+   width: 26px;
+   height: 26px;
+   cursor: pointer;
+   z-index: 1;
+}
+
+.clBtn>span,
+.clBtn>span::after {
+   display: block;
+   width: 100%;
+   height: 2px;
+   border-radius: 3px ;
    background-color: $black;
-   color: $primary;
+}
+
+.clBtn>span{
+   transform: rotate(45deg);
+}
+
+.clBtn>span::after {
+   content: '';
+   transform: rotate(90deg);
 }
