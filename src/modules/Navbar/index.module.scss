@@ -2,134 +2,143 @@
 @import '/src/assets/styles/mixins';
 
 
-
-.navbar{
-   margin-top: 25px;
+.navbar {
+    margin-top: 25px;
 }
 
 .container {
-   max-width: 1600px;
-   padding: 0 15px;
-   margin: 0 auto;
+    max-width: 1600px;
+    padding: 0 15px;
+    margin: 0 auto;
 }
 
-.navbarContent{
-   display: flex;
-   align-items: center;
-   border-radius: 10px;
-   height: 60px;
-   margin-top: 25px;
-   background: $white;
-   border-radius: 10px;
-   padding: 22px 24px;
+.navbarContent {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    height: 60px;
+    margin-top: 25px;
+    background: $white;
+    border-radius: 10px;
+    padding: 22px 24px;
 }
 
-.navbarMenu{
-   display: flex;
-   width: 100%;
-   justify-content: space-between;
-   margin: 0;
-   padding: 0;
+.navbarMenu {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
 }
 
-.navbarMenuItem{
-   list-style-type: none;
-   font-weight: 500;
-   font-size: 14px;
-   line-height: 16px;
-   color: #232323;
-   cursor: pointer;
-   position: relative;
-   & a{
-      color: #232323;
-   }
-   &:after {
-         content: '';
-         transition: all 0.3s ease-in-out;
-      }
-   
-   &:hover:after {
-      content: '';
-      position: absolute;
-      right: 0;
-      top: 20px;
-      display: inline-block;
-      width: 100%;
-      height: 2px;
-      border-radius: 2px;
-      background-color: $primary;
-   }
+.navbarMenuItem {
+    list-style-type: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: $black;
+    position: relative;
+    display: flex;
+    align-items: center;
 
-   & + &::before {
-      content: '';
-      height: 20px;
-      width: 1px;
-      position: absolute;
-      right: calc(100% + 15px);
-      top: 50%;
-      transform: translateY(-50%);
-      display: inline-block;
-      background: #cfcfcf;
-      border-radius: 2px;
-      opacity: 0.7;
-   }
-}
-.navbarMenuItemDropdown{
-   padding-right: 30px;
-   background: url("../../assets/images/Vector.svg") no-repeat right center;
-   &:hover .dropDown{
-      display: block;
-   }
-}
-.dropBtn{
-}
+    a {
+        padding: 5px;
+        color: $black;
+        position: relative;
 
-.dropDown{
-   display: none;
-   position: absolute;
-   background-color: #f1f1f1;
-   min-width: 160px;
-   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-   z-index: 1;
+        &::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background-color: $primary;
+            border-radius: 2px;
+            transition: all .15s;
+        }
 
-   & a{
-      color: black;
-      padding: 12px 16px;
-      display: block;
-   }
-   & a:hover{
-      background-color: #ddd;
-   }
+        &:hover {
+            &::after {
+                width: 50%;
+            }
+        }
+    }
+
+    .navbarMenuLinkActive {
+        &::after {
+            width: 100%;
+        }
+
+        &:hover {
+            &::after {
+                width: 100%;
+            }
+        }
+    }
+
+    & + &::before {
+        content: '';
+        height: 20px;
+        width: 1px;
+        position: absolute;
+        right: calc(100% + 15px);
+        top: 50%;
+        transform: translateY(-50%);
+        display: inline-block;
+        background: #cfcfcf;
+        border-radius: 2px;
+        opacity: 0.7;
+    }
 }
 
-.navbarMenuItemDropdown1 {
-   padding-right: 30px;
-   background: url("../../assets/images/Vector.svg") no-repeat right center;
+.navbarMenuItemDropdown {
+    padding-right: 30px;
 
-   &:hover .dropDown1 {
-      display: block;
-   }
+    svg {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 15px;
+        height: 9px;
+    }
+
+    &:hover .dropDown {
+        display: block;
+    }
 }
 
-.dropBtn1 {}
+.dropBtn {
+}
 
-.dropDown1 {
-   display: none;
-   position: absolute;
-   background-color: #f1f1f1;
-   min-width: 130px;
-   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-   z-index: 1;
+.dropDown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background-color: $white;
+    min-width: 100%;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 10px;
+    overflow: hidden;
 
-   & a {
-      color: black;
-      padding: 12px 16px;
-      display: block;
-   }
+    a {
+        color: $black;
+        padding: 12px 16px;
+        display: block;
+        font-size: 14px;
 
-   & a:hover {
-      background-color: #ddd;
-   }
+        &::after {
+            left: 0;
+            transform: unset;
+        }
+    }
+
+    a:hover {
+        background-color: $grayWhite;
+    }
 }
 
 

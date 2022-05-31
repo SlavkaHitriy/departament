@@ -1,16 +1,17 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 // Images
 import logoVntu from '../../assets/images/logoVntu.png'
 import logoOt from '../../assets/images/logoOt.png'
-import flag from '../../assets/images/flag.svg'
 
 // Styles
 import styles from './index.module.scss'
+
+// Components
 import BurgerMenu from '../BurgerMenu/BurgerMenu'
-
-
-
+import HeaderLangs from './HeaderLangs'
+import SvgSprite from '../SvgSprite/SvgSprite'
 
 const Header = () => {
     const [menuActive, setMenuActive] = useState(false)
@@ -22,9 +23,9 @@ const Header = () => {
                         <a className={styles.headerLogoItem} href='#'>
                             <img src={logoVntu} alt='logo'/>
                         </a>
-                        <a className={styles.headerLogoItem} href='#'>
+                        <Link className={styles.headerLogoItem} to={'/'}>
                             <img src={logoOt} alt='logo'/>
-                        </a>
+                        </Link>
                     </div>
                     <div className={styles.headerSearch}>
                         <form>
@@ -36,20 +37,9 @@ const Header = () => {
                             </button>
                         </form>
                     </div>
-                    <div className={styles.headerLanguage}>
-                        <select>
-                            <option>Українська</option>
-                            <option>English</option>
-                        </select>
-                        <img src={flag} alt='arrow'/>
-                    </div>
+                    <HeaderLangs />
                     <a href='mailto:ot.vntu@gmail.com' className={styles.headerEmail}>
-                        <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12.9592 7.82643L11.2842 9.49966C10.6049 10.1783 9.40977 10.1929 8.71582 9.49966L7.0407 7.82643L1.02445 13.8354C1.2484 13.9385 1.49531 14 1.75781 14H18.2422C18.5047 14 18.7515 13.9386 18.9754 13.8354L12.9592 7.82643Z" fill="#54A8DD"/>
-                            <path d="M18.2422 0H1.75781C1.49531 0 1.2484 0.0615223 1.02453 0.164617L7.45332 6.58607C7.45375 6.58649 7.45426 6.58657 7.45469 6.587C7.45512 6.58743 7.4552 6.58801 7.4552 6.58801L9.54555 8.67596C9.76758 8.897 10.2325 8.897 10.4545 8.67596L12.5445 6.58836C12.5445 6.58836 12.545 6.58743 12.5454 6.587C12.5454 6.587 12.5463 6.58649 12.5468 6.58607L18.9754 0.164578C18.7515 0.0614445 18.5047 0 18.2422 0Z" fill="#54A8DD"/>
-                            <path d="M0.186953 0.980467C0.0710937 1.21372 0 1.47264 0 1.75V12.25C0 12.5274 0.0710156 12.7863 0.186914 13.0195L6.21359 7.0002L0.186953 0.980467Z" fill="#54A8DD"/>
-                            <path d="M19.813 0.980389L13.7864 7.0002L19.813 13.0196C19.9289 12.7864 20 12.5274 20 12.25V1.75C20 1.47257 19.9289 1.21364 19.813 0.980389Z" fill="#54A8DD"/>
-                        </svg>
+                        <SvgSprite className={styles.headerEmailIcon} id={'email'}/>
                         <span>ot.vntu@gmail.com</span>
                     </a>
                     <div className={styles.headerMenu} onClick={() => setMenuActive(!menuActive)}>
@@ -61,7 +51,9 @@ const Header = () => {
                         </div>
                     </div>
                 </div>
-                <BurgerMenu active={menuActive} setActive={setMenuActive}/>
+                {
+                    menuActive && <BurgerMenu setActive={setMenuActive}/>
+                }
             </div>
         </header>
     )
