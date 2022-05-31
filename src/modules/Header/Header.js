@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 // Images
 import logoVntu from '../../assets/images/logoVntu.png'
@@ -7,8 +7,13 @@ import flag from '../../assets/images/flag.svg'
 
 // Styles
 import styles from './index.module.scss'
+import BurgerMenu from '../BurgerMenu/BurgerMenu'
+
+
+
 
 const Header = () => {
+    const [menuActive, setMenuActive] = useState(false)
     return (
         <header>
             <div className={styles.container}>
@@ -47,7 +52,7 @@ const Header = () => {
                         </svg>
                         <span>ot.vntu@gmail.com</span>
                     </a>
-                    <div className={styles.headerMenu}>
+                    <div className={styles.headerMenu} onClick={() => setMenuActive(!menuActive)}>
                         <div className={styles.textMenu}>Mеню</div>
                         <div className={styles.menuBtn}>
                             <div className={styles.burgerBtn}>
@@ -56,6 +61,7 @@ const Header = () => {
                         </div>
                     </div>
                 </div>
+                <BurgerMenu active={menuActive} setActive={setMenuActive}/>
             </div>
         </header>
     )
