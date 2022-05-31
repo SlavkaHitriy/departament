@@ -88,24 +88,82 @@ header {
     }
 }
 
-.headerLanguage {
-    display: flex;
-    align-items: center;
-    margin-right: 15px;
-    flex-shrink: 0;
+.headerLangs {
+    position: relative;
+    padding: 20px 25px;
+    z-index: 2;
 }
 
-.headerLanguage select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    padding: 0px 8px 0px 25px;
-    font-size: 18px;
-    line-height: 19px;
-    border: none;
-    outline: none;
-    color: $black;
-    background: url("../../assets/images/Vector.svg") no-repeat left center;
+.headerLangsItem {
+    display: flex;
+    align-items: center;
+    min-width: 160px;
+    transition: all .15s;
+    cursor: pointer;
+    font-weight: 500;
+    user-select: none;
+
+    &:hover {
+        color: $primary;
+    }
+}
+
+.headerLangsFlag {
+    width: 30px;
+    height: 30px;
+    margin-left: auto;
+}
+
+.headerLangsArrow {
+    width: 20px;
+    height: 10px;
+    margin-right: 10px;
+    transition: all .15s;
+}
+
+.headerLangsArrowActive {
+    transform: rotate(180deg);
+}
+
+.headerLangsDropdown {
+    padding: 55px 25px 20px;
+    background-color: $white;
+    box-shadow: 5px 4px 4px rgba(35, 35, 35, 0.05);
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    top: 7px;
+    z-index: -1;
+    animation: showMenu .15s forwards;
+
+    @keyframes showMenu {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .headerLangsItem {
+        padding-left: 30px;
+        animation: showMenuItem .15s forwards;
+
+        @keyframes showMenuItem {
+            0% {
+                transform: translateY(10px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        & + .headerLangsItem {
+            margin-top: 15px;
+        }
+    }
 }
 
 .headerVector {
@@ -120,12 +178,23 @@ header {
     color: $black;
     margin-right: 10px;
     font-weight: 500;
+    transition: all .15s;
 
-    svg {
-        margin-right: 10px;
+    &:hover {
+        color: $primary;
     }
 
     path {
+        fill: $primary;
+    }
+}
+
+.headerEmailIcon {
+    margin-right: 10px;
+    width: 20px;
+    height: 14px;
+
+    use {
         fill: $primary;
     }
 }
@@ -136,6 +205,11 @@ header {
     cursor: pointer;
     background: $primary;
     border-radius: 10px;
+    transition: all .15s;
+
+    &:hover {
+        filter: brightness(.9);
+    }
 }
 
 .textMenu {

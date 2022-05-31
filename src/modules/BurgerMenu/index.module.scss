@@ -1,141 +1,133 @@
 @import '/src/assets/styles/vars';
 @import '/src/assets/styles/mixins';
 
-
-
-.menu{
-   width: 329px;
-   background-color: $white;
-   padding: 19px;
-   display: flex;
-   position: absolute;
-   top: 0;
-   right: 0;
-   z-index: 3;
-   display: none;
-}
-.menu.active {
-   display: block;
+.menu {
+    max-width: 330px;
+    width: 100%;
+    background-color: $white;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    height: 100vh;
 }
 
-.menuContent{
-   background-color: $white;
+.menuContent {
+    background-color: $white;
+    height: 100%;
 }
 
-.menuList{
+.menuList {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 
-.menuListItems{
-   padding-left: 10px;
+.menuListItems {
+    & + & {
+        margin-top: 10px;
+    }
 
-   & + & {
-      margin-top: 30px;
-   } 
-   &:hover{
-      background-color: #ddd;
-   }
+    svg {
+        width: 35px;
+        height: 35px;
+        margin-right: 25px;
+
+        use {
+            fill: $primary;
+        }
+    }
 }
 
-.menuListItem{
-   display: flex;
-   align-items: center;
+.menuListItem {
+    display: flex;
+    align-items: center;
+    padding: 10px 30px;
+    transition: all .15s;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    color: $black;
 
-   svg{
-      width: 40px;
-      height: 45px;
-      display: block;
-      align-items: flex-start;
-   }
-
-   path {
-      fill: $primary;
-   }
-
-   p{
-      margin-left: 25px;
-      font-weight: 500;
-      font-size: 20px;
-      line-height: 23px;
-      color: $black;
-   }
+    &:hover {
+        color: $primary;
+        background-color: $grayWhite;
+    }
 }
 
-.menuListItems1 {
-   padding-left: 10px;
-   margin: 30px 0 30px 0;
+.menuListItemNested {
+    padding: 10px 30px;
+    display: flex;
 }
 
-.menuListItem1 {
-   display: flex;
+.menuListSubMenu {
 
-   svg {
-      width: 40px;
-      height: 40px;
-      display: block;
-      align-items: flex-start;
-   }
-   
-   path {
-      fill: $primary;
-   }
 }
 
-.subMenu{
-   padding-left: 25px ;
+.menuListNested {
+
 }
 
-.subItem{
-   margin:0 ;
-   font-weight: 500;
-   font-size: 20px;
-   line-height: 23px;
-   color: $black;
-
-   & + & {
-      margin-top: 10px;
-   }
-
-   & a{
-   margin: 0;
-   font-weight: 400;
-   font-size: 16px;
-   line-height: 23px;
-   color: $black;
-   }
-
-   & a:hover {
-      display: inline-block;
-      width: 100%;
-      background-color: #ddd;
-   }
+.menuListNestedTitle {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    color: $black;
+    margin-bottom: 10px;
 }
 
-.clBtn {
-   display: flex;
-   align-items: center;
-   position: absolute;
-   right: 15px;
-   top: 15px;
-   width: 26px;
-   height: 26px;
-   cursor: pointer;
-   z-index: 1;
+.menuListNestedItems {
+
 }
 
-.clBtn>span,
-.clBtn>span::after {
-   display: block;
-   width: 100%;
-   height: 2px;
-   border-radius: 3px ;
-   background-color: $black;
+.menuListNestedItem {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 23px;
+    color: $black;
+    display: block;
+    padding: 5px;
+    margin-left: -5px;
+    transition: all .15s;
+
+    &:hover {
+        color: $primary;
+    }
 }
 
-.clBtn>span{
-   transform: rotate(45deg);
-}
+.menuClose {
+    position: absolute;
+    right: 25px;
+    top: 30px;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
 
-.clBtn>span::after {
-   content: '';
-   transform: rotate(90deg);
+    span {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 30px;
+        height: 3px;
+        border-radius: 3px;
+        display: block;
+        background-color: $black;
+        transition: all .15s;
+
+        &:first-child {
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        &:last-child {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+    }
+
+    &:hover {
+        span {
+            background-color: $red;
+        }
+    }
 }

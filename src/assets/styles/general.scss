@@ -11,6 +11,7 @@ body {
     background-color: $grayWhite;
     font-size: 16px;
     font-family: 'Raleway', sans-serif;
+    font-feature-settings: 'pnum' on, 'lnum' on;
 }
 
 a {
