@@ -8,18 +8,20 @@ import styles from './index.module.scss'
 // Components
 import Header from '../../modules/Header/Header'
 import Navbar from '../../modules/Navbar/Navbar'
+import Footer from '../../modules/Footer/Footer'
 import HomeDepartmentOt from './HomeDepartmentOt'
 import HomeMainInfo from './HomeMainInfo'
 import HomeNews from './HomeNews'
+import HomeOpportunities from './HomeOpportunities'
+
 
 const Home = () => {
     return (
         <div className={styles.home}>
-            <Header />
-            <Navbar />
-            <HomeDepartmentOt/>
-            <HomeMainInfo/>
-            <HomeNews/>
+            <HomeDepartmentOt />
+            <HomeMainInfo />
+            <HomeNews />
+            <HomeOpportunities />
         </div>
     )
 }
