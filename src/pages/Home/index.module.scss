@@ -1,13 +1,18 @@
-@import '../../assets/styles/vars';
-@import '../../assets/styles/mixins';
+@import '/src/assets/styles/vars';
+@import '/src/assets/styles/mixins';
 
-.home {}
+
+
+.home {
+}
 
 .container{
    max-width: 1600px;
    padding: 0 15px;
    margin: 0 auto;
 }
+
+
 
 // -------------First Block---------------------------- 
 
@@ -33,7 +38,6 @@
    max-width: 924px;
    border-radius: 0px 20px 20px 0px;
    padding: 50px 50px 50px 50px;
-
 }
 
 .departmentOtTitle{
@@ -63,5 +67,220 @@
    background: url(../../assets/images/Cursor.svg) no-repeat left top ;
    &:not(:first-child){
       margin-top: 16px;
+   }
+}
+
+// -------------Second Block---------------------------- 
+
+.homeMainInfo{
+   margin-top: 237px;
+}
+
+.mainInfo{
+   position: relative;
+
+   & img {
+      max-width: 925px;
+      height: 655px;
+   }
+}
+
+.mainInfoContent{
+   position: absolute;
+   top: -130px;
+   right: 0;
+   background-color: $white;
+   color: $black;
+   max-width: 998px;
+   border-radius: 0px 20px 20px 0px;
+   padding: 35px 80px 35px 80px;
+   border-radius: 10px;
+
+   &> p, ul {
+      margin-bottom: 20px;
+   }
+}
+
+.mainInfoTitle{
+   margin-bottom: 42px;
+}
+
+.mainInfoText{
+   font-weight: 500;
+   font-size: 18px;
+   line-height: 178%;
+
+   & a{
+      color: $primary;
+      cursor: pointer;
+   }
+}
+
+.mainInfoList{
+}
+
+.mainInfoListItem{
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 24px;
+   color: $black;
+   padding-left: 30px;
+   background: url(../../assets/images/Cursor.svg) no-repeat left top;
+
+   &:not(:first-child) {
+      margin-top: 15px;
+   }
+}
+
+.mainInfoButton {
+   border: none;
+   outline: none;
+   display: inline-block;
+   text-align: center;
+   text-decoration: none;
+   height: 48px;
+   cursor: pointer;
+   font-weight: 600;
+   padding: 12px 35px;
+   box-shadow: 5px 4px 4px rgba(35, 35, 35, 0.05);
+   border-radius: 20px;
+   color: $grayWhite;
+   font-size: 18px;
+   line-height: 150%;
+   transition: all .15s;
+   background: $primary;
+
+   &:hover{
+      filter: brightness(.9)
+   }
+}
+
+
+// -------------Third Block---------------------------- 
+
+
+
+.homeNews{
+   margin-top: 100px;
+}
+
+.hoveNewsTitleWrapper{
+   display: flex;
+   justify-content: center;
+}
+
+.homeNewsTitle{
+
+}
+
+.homeNewsItems{
+   display: flex;
+   margin: 88px -10px 0 -10px;
+   
+}
+
+.homeNewsItem{
+   margin: 0 10px;
+   flex: 0 1 25%;
+   position: relative;
+   cursor: pointer;
+
+   img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px ;
+   }
+
+   &:hover{
+      .homeNewsItemTitle::before{
+         width: 100%;
+      }
+   }
+}
+
+.homeNewsItemContent{
+   position: absolute;
+   bottom: -1px;
+   background: $white;
+   
+   border-radius: 10px;
+   padding: 26px 15px 15px 15px;
+   
+}
+
+.homeNewsItemTitle{
+   font-weight: 500;
+   font-size: 18px;
+   line-height: 21px;
+   color: $black;
+   margin-bottom: 10px;
+   position: relative;
+
+   &::before{
+      content:'';
+      width: 15%;
+      height: 1px;
+      position: absolute;
+      bottom: calc(100% + 10px);
+      background: $primary;
+      display: block;
+      transition: all .3s;
+   }
+}
+
+.homeNewsItemText{
+   font-weight: 400;
+   font-size: 12px;
+   line-height: 14px;
+   color: $gray;
+}
+
+// -------------Fourth Block---------------------------- 
+
+
+.homeOpportunities{
+   margin: 150px 0;
+}
+.opportunities{
+   position: relative;
+}
+
+.homeOpportunitiesImg{
+   position: absolute;
+   top: -50px;
+   right: 0;
+
+}
+
+.homeOpportunitiesContent{
+   width: 998px;
+   padding: 30px 80px 40px 80px;
+   position: relative;
+   right: 0;
+   background: $white;
+   border-radius: 10px;
+}
+
+.homeOpportunitiesTitle{
+   margin-bottom: 42px;
+}
+
+.homeOpportunitiesList{
+   column-count: 2;
+}
+
+.homeOpportunitiesListItem{
+   display: block;
+
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 150%;
+   color: $black;
+   padding-left: 30px;
+   background: url(../../assets/images/Cursor.svg) no-repeat left top;
+   
+   &:not(:first-child) {
+      margin-top: 20px;
    }
 }

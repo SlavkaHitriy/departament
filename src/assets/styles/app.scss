@@ -1,0 +1,13 @@
+@import './vars';
+@import './mixins';
+
+
+.app{
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+}
+
+.appMain{
+   flex: 1 1 auto;
+}
