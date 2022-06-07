@@ -119,6 +119,10 @@ header {
     height: 10px;
     margin-right: 10px;
     transition: all .15s;
+
+    use {
+        fill: $primary;
+    }
 }
 
 .headerLangsArrowActive {

@@ -9,7 +9,7 @@ const MainRoutes = () => {
     return (
         <Routes>
             <Route path='/' element={<Home/>}/>
-            <Route path='/news' element={<News />} />
+            <Route path='/news/:page' element={<News />} />
             <Route path='*' element={<Navigate to='/' replace/>}/>
         </Routes>
     )
