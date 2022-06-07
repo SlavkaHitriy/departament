@@ -16,7 +16,7 @@ const HeaderLangs = () => {
     const [activeLangID, setActiveLangID] = useState(langs[0].iconID)
     const [openedDropdown, setOpenedDropdown] = useState(false)
 
-    const changeLang = id => {
+    const changeLang = (id) => {
         setActiveLangID(id)
         setOpenedDropdown(false)
     }
@@ -30,7 +30,7 @@ const HeaderLangs = () => {
                         [styles.headerLangsArrowActive]: openedDropdown,
                     })} id={'arrow'}/>
                     {
-                        langs.map(lang => activeLangID === lang.iconID && (<React.Fragment key={lang.iconID}>
+                        langs.map((lang) => activeLangID === lang.iconID && (<React.Fragment key={lang.iconID}>
                             {lang.name}
                             <SvgSprite className={styles.headerLangsFlag} id={lang.iconID}/>
                         </React.Fragment>))

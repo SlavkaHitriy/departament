@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 // Styles
 import styles from './index.module.scss'
@@ -10,16 +11,16 @@ const BurgerMenu = ({setActive}) => {
             <div className={styles.menuContent}>
                 <ul className={styles.menuList}>
                     <li className={styles.menuListItems}>
-                        <a className={styles.menuListItem} href='#'>
+                        <Link className={styles.menuListItem} to='/'>
                             <SvgSprite id={'menuIcon1'}/>
                             Головна
-                        </a>
+                        </Link>
                     </li>
                     <li className={styles.menuListItems}>
-                        <a className={styles.menuListItem} href='#'>
+                        <Link className={styles.menuListItem} to='/news'>
                             <SvgSprite id={'menuIcon2'}/>
                             Новини
-                        </a>
+                        </Link>
                     </li>
                     <li className={styles.menuListItems}>
                         <a className={styles.menuListItem} href='#'>
@@ -45,7 +46,7 @@ const BurgerMenu = ({setActive}) => {
                             <div className={styles.menuListNested}>
                                 <div className={styles.menuListNestedTitle}>Навчальна інформація</div>
                                 <div className={styles.menuListNestedItems}>
-                                    <a className={styles.menuListNestedItem} href='#'>Ми в JetIQ</a>
+                                    <a className={styles.menuListNestedItem} href='https://vntu.edu.ua/'>Ми в JetIQ</a>
                                     <a className={styles.menuListNestedItem} href='#'>Матеріали дисциплін</a>
                                     <a className={styles.menuListNestedItem} href='#'>ОПП</a>
                                 </div>
