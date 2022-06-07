@@ -11,10 +11,17 @@ import SvgSprite from '../SvgSprite/SvgSprite'
 const Navbar = () => {
     const menuItems = [
         {name: 'Головна', link: '/'},
-        {name: 'Новини', link: '/news'},
-        {name: 'Викладачі', link: '/teachers'},
+        {
+            name: 'Про кафедру',
+            nestedMenu: [
+                {name: 'Історія кафедри', link: '/history'},
+                {name: 'Викладачі', link: '/teachers'},
+                {name: 'Випускники', link: '/graduates'},
+                {name: 'Стейкхолдери', link: '/stakeholders'},
+            ],
+        },
+        {name: 'Новини', link: '/news/1'},
         {name: 'Абітурієнту', link: '/entrant'},
-        {name: 'Історія кафедри', link: '/history'},
         {
             name: 'Навчальна інформація',
             nestedMenu: [
@@ -32,8 +39,6 @@ const Navbar = () => {
         },
         {name: 'Методичні розробки', link: '/history'},
         {name: 'Лабораторія кафедри', link: '/developments'},
-        {name: 'Випускники', link: '/graduates'},
-        {name: 'Стейкхолдери', link: '/stakeholders'},
     ]
 
     return (
@@ -45,7 +50,7 @@ const Navbar = () => {
                             menuItems.map(menuItem =>
                                 !menuItem.nestedMenu ? (
                                     <li className={styles.navbarMenuItem} key={menuItem.name}>
-                                        <NavLink className={({isActive}) => isActive && styles.navbarMenuLinkActive} to={menuItem.link}>
+                                        <NavLink className={({isActive}) => isActive ? styles.navbarMenuLinkActive : styles.navbarMenuLink} to={menuItem.link}>
                                             {menuItem.name}
                                         </NavLink>
                                     </li>
@@ -56,7 +61,7 @@ const Navbar = () => {
                                     })} key={menuItem.name}>
                                         <div className={styles.dropBtn}>
                                             {menuItem.name}
-                                            <SvgSprite id={'arrow'}/>
+                                            <SvgSprite spriteID={'arrow'}/>
                                         </div>
                                         <div className={styles.dropDown}>
                                             {

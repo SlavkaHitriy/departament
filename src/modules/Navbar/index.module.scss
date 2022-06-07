@@ -15,7 +15,6 @@
 .navbarContent {
     display: flex;
     align-items: center;
-    border-radius: 10px;
     height: 60px;
     margin-top: 25px;
     background: $white;
@@ -34,16 +33,20 @@
 .navbarMenuItem {
     list-style-type: none;
     font-weight: 500;
-    font-size: 14px;
+    letter-spacing: .6px;
+    font-size: 16px;
     line-height: 16px;
-    color: $black;
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    color: $black;
 
     a {
         padding: 5px;
-        color: $black;
+        display: flex;
+        align-items: center;
         position: relative;
 
         &::after {
@@ -83,7 +86,7 @@
         height: 20px;
         width: 1px;
         position: absolute;
-        right: calc(100% + 15px);
+        left: 0;
         top: 50%;
         transform: translateY(-50%);
         display: inline-block;
@@ -94,15 +97,14 @@
 }
 
 .navbarMenuItemDropdown {
-    padding-right: 30px;
-
     svg {
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
         width: 15px;
         height: 9px;
+        margin-left: 10px;
+    }
+
+    use {
+        fill: $primary;
     }
 
     &:hover .dropDown {

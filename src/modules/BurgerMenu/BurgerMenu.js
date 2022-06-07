@@ -12,37 +12,37 @@ const BurgerMenu = ({setActive}) => {
                 <ul className={styles.menuList}>
                     <li className={styles.menuListItems}>
                         <Link className={styles.menuListItem} to='/'>
-                            <SvgSprite id={'menuIcon1'}/>
+                            <SvgSprite spriteID={'menuIcon1'}/>
                             Головна
                         </Link>
                     </li>
                     <li className={styles.menuListItems}>
-                        <Link className={styles.menuListItem} to='/news'>
-                            <SvgSprite id={'menuIcon2'}/>
+                        <Link className={styles.menuListItem} to='/news/1'>
+                            <SvgSprite spriteID={'menuIcon2'}/>
                             Новини
                         </Link>
                     </li>
                     <li className={styles.menuListItems}>
                         <a className={styles.menuListItem} href='#'>
-                            <SvgSprite id={'menuIcon3'}/>
+                            <SvgSprite spriteID={'menuIcon3'}/>
                             Викладачі
                         </a>
                     </li>
                     <li className={styles.menuListItems}>
                         <a className={styles.menuListItem} href='#'>
-                            <SvgSprite id={'menuIcon4'}/>
+                            <SvgSprite spriteID={'menuIcon4'}/>
                             Абітурієнту
                         </a>
                     </li>
                     <li className={styles.menuListItems}>
                         <a className={styles.menuListItem} href='#'>
-                            <SvgSprite id={'menuIcon5'}/>
+                            <SvgSprite spriteID={'menuIcon5'}/>
                             Історія кафедри
                         </a>
                     </li>
                     <li className={styles.menuListItems}>
                         <div className={styles.menuListItemNested}>
-                            <SvgSprite id={'menuIcon6'}/>
+                            <SvgSprite spriteID={'menuIcon6'}/>
                             <div className={styles.menuListNested}>
                                 <div className={styles.menuListNestedTitle}>Навчальна інформація</div>
                                 <div className={styles.menuListNestedItems}>
@@ -55,7 +55,7 @@ const BurgerMenu = ({setActive}) => {
                     </li>
                     <li className={styles.menuListItems}>
                         <div className={styles.menuListItemNested}>
-                            <SvgSprite id={'menuIcon7'}/>
+                            <SvgSprite spriteID={'menuIcon7'}/>
                             <div className={styles.menuListNested}>
                                 <div className={styles.menuListNestedTitle}>Наукова робота</div>
                                 <div className={styles.menuListNestedItems}>
@@ -67,25 +67,25 @@ const BurgerMenu = ({setActive}) => {
                     </li>
                     <li className={styles.menuListItems}>
                         <a className={styles.menuListItem} href='#'>
-                            <SvgSprite id={'menuIcon8'}/>
+                            <SvgSprite spriteID={'menuIcon8'}/>
                             Методичні розробки
                         </a>
                     </li>
                     <li className={styles.menuListItems}>
                         <a className={styles.menuListItem} href='#'>
-                            <SvgSprite id={'menuIcon9'}/>
+                            <SvgSprite spriteID={'menuIcon9'}/>
                             Лабораторія кафедри
                         </a>
                     </li>
                     <li className={styles.menuListItems}>
                         <a className={styles.menuListItem} href='#'>
-                            <SvgSprite id={'menuIcon10'}/>
+                            <SvgSprite spriteID={'menuIcon10'}/>
                             Випускники
                         </a>
                     </li>
                     <li className={styles.menuListItems}>
                         <a className={styles.menuListItem} href='#'>
-                            <SvgSprite id={'menuIcon11'}/>
+                            <SvgSprite spriteID={'menuIcon11'}/>
                             Стейкхолдери
                         </a>
                     </li>
