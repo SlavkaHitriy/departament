@@ -16,7 +16,7 @@ const HeaderLangs = () => {
     const [activeLangID, setActiveLangID] = useState(langs[0].iconID)
     const [openedDropdown, setOpenedDropdown] = useState(false)
 
-    const changeLang = id => {
+    const changeLang = (id) => {
         setActiveLangID(id)
         setOpenedDropdown(false)
     }
