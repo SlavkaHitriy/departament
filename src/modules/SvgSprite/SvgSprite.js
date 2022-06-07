@@ -3,10 +3,10 @@ import React from 'react'
 // Sprite
 import sprite from './sprite.svg'
 
-const SvgSprite = ({className, id}) => {
+const SvgSprite = ({className, spriteID}) => {
     return (
         <svg className={className}>
-            <use href={`${sprite}#${id}`} />
+            <use href={`${sprite}#${spriteID}`} />
         </svg>
     )
 }
