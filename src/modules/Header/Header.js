@@ -39,7 +39,7 @@ const Header = () => {
                     </div>
                     <HeaderLangs />
                     <a href='mailto:ot.vntu@gmail.com' className={styles.headerEmail}>
-                        <SvgSprite className={styles.headerEmailIcon} id={'email'}/>
+                        <SvgSprite className={styles.headerEmailIcon} spriteID={'email'}/>
                         <span>ot.vntu@gmail.com</span>
                     </a>
                     <div className={styles.headerMenu} onClick={() => setMenuActive(!menuActive)}>

@@ -37,7 +37,7 @@ const Navbar = () => {
                 {name: 'Журнал ІТКІ', link: '/journal'},
             ],
         },
-        {name: 'Методичні розробки', link: '/history'},
+        { name: 'Методичні розробки', link: '/methodical'},
         {name: 'Лабораторія кафедри', link: '/developments'},
     ]
 
