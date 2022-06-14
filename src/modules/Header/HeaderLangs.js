@@ -28,11 +28,11 @@ const HeaderLangs = () => {
                     <SvgSprite className={cn({
                         [styles.headerLangsArrow]: true,
                         [styles.headerLangsArrowActive]: openedDropdown,
-                    })} id={'arrow'}/>
+                    })} spriteID={'arrow'}/>
                     {
                         langs.map((lang) => activeLangID === lang.iconID && (<React.Fragment key={lang.iconID}>
                             {lang.name}
-                            <SvgSprite className={styles.headerLangsFlag} id={lang.iconID}/>
+                            <SvgSprite className={styles.headerLangsFlag} spriteID={lang.iconID}/>
                         </React.Fragment>))
                     }
                 </div>
@@ -44,7 +44,7 @@ const HeaderLangs = () => {
                             langs.map(lang => activeLangID !== lang.iconID && (
                                 <div className={styles.headerLangsItem} onClick={() => changeLang(lang.iconID)} key={lang.iconID}>
                                     {lang.name}
-                                    <SvgSprite className={styles.headerLangsFlag} id={lang.iconID}/>
+                                    <SvgSprite className={styles.headerLangsFlag} spriteID={lang.iconID}/>
                                 </div>
                             ))
                         }

@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 // Styles
 import styles from './index.module.scss'
 
 // Images
 import HomeNewsFirstPicture from '../../assets/images/HomeNewsFirstPicture.png'
+import Azarov from '../../assets/images/Azarov.jpg'
 
 // Components
 import Title from '../../modules/Title/Title'
@@ -23,6 +24,7 @@ const News = () => {
     const getNews = async () => {
         const response = await fetch(`http://localhost:5000/PagedNews?page=${page}&PageSize=${pageSize}`)
         const news = await response.json()
+        
         setLoadingData(false)
 
         setPaginationInfo({
@@ -43,9 +45,23 @@ const News = () => {
             <div className={styles.newsContent}>
                 <div className={styles.container}>
                     <div className={styles.newsTitleWrapper}>
-                        <Title className={styles.newsTitle} contents='Новини'></Title>
+                        <Title className={styles.newsTitle} contents='Новини'/>
                     </div>
                     <div className={styles.homeNewsItems}>
+                        <Link className={styles.homeNewsItem} to="/new/0">
+                            <img
+                                src={Azarov}
+                                alt='Azarov'
+                            />
+                            <div className={styles.homeNewsItemContent}>
+                                <h4 className={styles.homeNewsItemTitle}>
+                                    УКАЗ ПРЕЗИДЕНТА УКРАЇНИ №658/2021
+                                </h4>
+                                <p className={styles.homeNewsItemText}>
+                                    Відповідно до Указу Президента України від 10 вересня 2011 року № 906 "Про державні стипендії для видатних діячів науки, освіти, культури і мистецтва, охорони здоров'я, фізичної культури і спорту та інформаційної сфери"...
+                                </p>
+                            </div>
+                        </Link>
                         {
                             news.length > 0 && news.map(newItem => (
                                 <div className={styles.homeNewsItem} key={newItem.id}>
