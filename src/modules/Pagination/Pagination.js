@@ -11,6 +11,7 @@ const Pagination = ({info}) => {
         <div className={styles.pagination}>
             {
                 info && (
+                    
                     <ul className={styles.paginationList}>
                         <PaginationItem
                             link={`/news/${info.pageNumber - 1}`}
@@ -18,7 +19,7 @@ const Pagination = ({info}) => {
                             disabled={info.pageNumber === 1}
                         />
 
-
+                    
                         {info.pageNumber === 3 && <PaginationItem link={`/news/1`}>1</PaginationItem>}
                         {
                             info.pageNumber > 3 && (<>
