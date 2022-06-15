@@ -12,7 +12,7 @@ const MainRoutes = () => {
             <Route path='/' element={<Home/>}/>
             <Route path='/news/:page' element={<News />} />
             <Route path='/new/0' element={<New />} />
-            <Route path='/history' element={<History />} />
+
             <Route path='*' element={<Navigate to='/' replace/>}/>
         </Routes>
     )
