@@ -5,6 +5,7 @@ import { Routes, Route, Navigate } from 'react-router-dom'
 import Home from '../pages/Home/Home'
 import News from '../pages/News/News'
 import New from '../modules/News/New'
+import History from '../pages/History/History'
 
 const MainRoutes = () => {
     return (

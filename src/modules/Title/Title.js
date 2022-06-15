@@ -7,7 +7,8 @@ const Title = (props) => {
    return (
       <h3 className={cn({
          [styles.title] : true,
-         [props.className] : props.className
+         [props.className] : props.className,
+         [styles.titleCenter] : props.center,
       })}>{props.contents}</h3>
    )
 }

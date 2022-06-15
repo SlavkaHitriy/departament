@@ -1,0 +1,68 @@
+@import '/src/assets/styles/vars';
+@import '/src/assets/styles/mixins';
+
+.history {
+
+}
+
+.historyContent {
+    background-color: $white;
+    border-radius: 10px;
+    padding: 45px;
+    margin-bottom: 60px;
+}
+
+.historyTitle {
+    text-align: center;
+}
+
+.historyItem {
+    & + & {
+        margin-top: 30px;
+    }
+}
+
+.historyParagraph {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 36px;
+}
+
+.historyImg {
+    max-width: 100%;
+    max-height: 600px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.historyImgText {
+    text-align: center;
+    font-weight: 700;
+    margin: 20px 0;
+    font-size: 20px;
+}
+
+.historyImgSubtext {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 36px;
+}
+
+.historyList {
+    margin-top: 15px;
+}
+
+.historyListItem {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    padding-left: 30px;
+    background: url(../../assets/images/Cursor.svg) no-repeat left 5px;
+    max-width: 750px;
+
+    & + & {
+        margin-top: 15px;
+    }
+}
