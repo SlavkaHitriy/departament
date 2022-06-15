@@ -15,7 +15,7 @@
    font-family: 'Raleway';
    font-style: normal;
    font-weight: 500;
-   font-size: 20px;
+   font-size: 18px;
    line-height: 164%;
    font-feature-settings: 'pnum' on, 'lnum' on;
 }
@@ -36,6 +36,7 @@
          max-width: 100%;
          display: block;
          margin: 0 auto;
+         border-radius: 10px;
       }
 }
 .homeNewsItem{
