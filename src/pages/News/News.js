@@ -45,7 +45,7 @@ const News = () => {
             <div className={styles.newsContent}>
                 <div className={styles.container}>
                     <div className={styles.newsTitleWrapper}>
-                        <Title className={styles.newsTitle} contents='Новини FM'/>
+                        <Title className={styles.newsTitle} contents='Новини'/>
                     </div>
                     <div className={styles.homeNewsItems}>
                         <Link className={styles.homeNewsItem} to="/new/0">
