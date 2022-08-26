@@ -22,7 +22,7 @@ const News = () => {
     const [loadingData, setLoadingData] = useState(true)
 
     const getNews = async () => {
-        const response = await fetch(`http://localhost:5000/PagedNews?page=${page}&PageSize=${pageSize}`)
+        const response = await fetch(`${process.env.REACT_APP_API_HOST}/PagedNews?page=${page}&PageSize=${pageSize}`)
         const news = await response.json()
 
         setLoadingData(false)
