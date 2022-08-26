@@ -1,0 +1,133 @@
+@import '/src/assets/styles/vars';
+@import '/src/assets/styles/mixins';
+
+.menu {
+    max-width: 330px;
+    width: 100%;
+    background-color: $white;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    height: 100vh;
+}
+
+.menuContent {
+    background-color: $white;
+    height: 100%;
+}
+
+.menuList {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.menuListItems {
+    & + & {
+        margin-top: 10px;
+    }
+
+    svg {
+        width: 35px;
+        height: 35px;
+        margin-right: 25px;
+
+        use {
+            fill: $primary;
+        }
+    }
+}
+
+.menuListItem {
+    display: flex;
+    align-items: center;
+    padding: 10px 30px;
+    transition: all .15s;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    color: $black;
+    
+    &:hover {
+        color: $primary;
+        background-color: $grayWhite;
+    }
+}
+
+.menuListItemNested {
+    padding: 10px 30px;
+    display: flex;
+}
+
+.menuListSubMenu {
+
+}
+
+.menuListNested {
+
+}
+
+.menuListNestedTitle {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    color: $black;
+    margin-bottom: 10px;
+}
+
+.menuListNestedItems {
+
+}
+
+.menuListNestedItem {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 23px;
+    color: $black;
+    display: block;
+    padding: 5px;
+    margin-left: -5px;
+    transition: all .15s;
+
+    &:hover {
+        color: $primary;
+    }
+}
+
+.menuClose {
+    position: absolute;
+    right: 25px;
+    top: 30px;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+
+    span {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 30px;
+        height: 3px;
+        border-radius: 3px;
+        display: block;
+        background-color: $black;
+        transition: all .15s;
+
+        &:first-child {
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        &:last-child {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+    }
+
+    &:hover {
+        span {
+            background-color: $red;
+        }
+    }
+}

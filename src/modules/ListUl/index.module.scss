@@ -1,0 +1,20 @@
+@import '/src/assets/styles/vars';
+@import '/src/assets/styles/mixins';
+
+
+.itemLists{
+   margin-top: 25px;
+}
+
+.itemList{
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 24px;
+   color: $black;
+   padding-left: 30px;
+   background: url(../../assets/images/Cursor.svg) no-repeat left top;
+
+   &:not(:first-child) {
+      margin-top: 16px;
+   }
+}

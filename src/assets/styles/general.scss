@@ -1,0 +1,67 @@
+@import 'vars';
+@import 'mixins';
+@import 'fonts';
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: $black;
+    background-color: $grayWhite;
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
+
+input {
+    border: none;
+    outline: none;
+    display: block;
+    font-family: inherit;
+}
+
+button {
+    display: block;
+    border: none;
+    background: none;
+    outline: none;
+    font-family: inherit;
+    cursor: pointer;
+    padding: 0;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    margin: 0;
+    padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1630px;
+    padding: 0 15px;
+    width: 100%;
+    margin: 0 auto;
+}
