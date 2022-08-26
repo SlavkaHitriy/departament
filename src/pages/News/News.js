@@ -22,7 +22,7 @@ const News = () => {
     const [loadingData, setLoadingData] = useState(true)
 
     const getNews = async () => {
-        const response = await fetch(`http://localhost:5000/PagedNews?page=${page}&PageSize=${pageSize}`)
+        const response = await fetch(`${process.env.REACT_APP_API_HOST}/PagedNews?page=${page}&PageSize=${pageSize}`)
         const news = await response.json()
 
         setLoadingData(false)
@@ -45,7 +45,7 @@ const News = () => {
             <div className={styles.newsContent}>
                 <div className={styles.container}>
                     <div className={styles.newsTitleWrapper}>
-                        <Title className={styles.newsTitle} contents='Новини FM'/>
+                        <Title className={styles.newsTitle} contents='Новини'/>
                     </div>
                     <div className={styles.homeNewsItems}>
                         <Link className={styles.homeNewsItem} to="/new/0">
