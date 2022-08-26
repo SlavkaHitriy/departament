@@ -14,7 +14,7 @@ const Stakeholders = () => {
       <div className={styles.stakeholders}>
          <div className={styles.container}>
             <div className={styles.stakeholdersTitleWrapper}>
-               <Title className={styles.stakeholdersTitle} contents="Стейкхолдери" />
+               <Title className={styles.stakeholdersTitle} contents="Стейкхолдери h" />
             </div>
             <div className={styles.stakeholdersContent}>
                <p className={styles.stakeholdersText}>
